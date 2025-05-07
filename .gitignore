@@ -63,32 +63,6 @@ yarn-error.log*
 node_modules/
 jspm_packages/
 
-# Optional npm cache directory
-.npm
 
-# Optional eslint cache
-.eslintcache
-
-# Optional REPL history
-.node_repl_history
-
-# Output of 'npm pack'
-*.tgz
-
-# Yarn Integrity file
-.yarn-integrity
-
-# dotenv environment variables file
-.env
-
-# next.js build output
-.next
-
-# Lerna
-lerna-debug.log
-
-# System Files
-.DS_Store
-Thumbs.db
 
 private/
