@@ -1,0 +1,14 @@
+{
+  "name": "hackathon-express-server",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/Nishi0402/hackathon-express-server.git",
+  "author": "Nishigandha Kolapkar <nishigandhak04@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "express": "^5.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "mysql2": "^3.14.1"
+  }
+}
