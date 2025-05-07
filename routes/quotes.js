@@ -14,7 +14,7 @@ router.get("", (req, resp) => {
     })
 })
 
-// POST /users
+// POST /quotes
 router.post("/addquote", (req, resp) => {
     const {id,author,contents,userId,createdTime} = req.body
     
@@ -37,7 +37,7 @@ router.post("/addquote", (req, resp) => {
     )
 })
 
-// PATCH /quote/changecontents
+// PATCH /quotes/changecontents
 router.patch("/changecontents", (req,resp) => {
     const {id, contents} = req.body
     
@@ -53,7 +53,7 @@ router.patch("/changecontents", (req,resp) => {
 })
 
 
-// DELETE /quote/:id
+// DELETE /quotes/:id
 router.delete("/:id", (req, resp) => {
     db.query("DELETE FROM quote WHERE id=?", [req.params.id],
         (err, results) => {
