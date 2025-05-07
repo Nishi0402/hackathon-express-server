@@ -1,7 +1,8 @@
 const express = require("express")
 const app = express()
 const userRouter = require("./routes/users")
-const { jwtAuth } = require("./utils/jwtauth");
+const quoteRouter = require("./routes/quotes")
+
 
 // cmd> npm install cors
 const cors = require("cors");
@@ -10,6 +11,7 @@ app.use(cors());
 app.use(express.json())
 //app.use(jwtAuth);
 app.use("/user", userRouter)
+app.use("/quotes", quoteRouter)
 
 //app.use("/orders", orderRouter)
 

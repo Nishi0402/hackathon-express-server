@@ -36,30 +36,32 @@ router.post("/signin", (req, resp) => {
 })
 
 
-// //POST /user SignUp
-// router.post("/signup", (req, resp) => {
-//     const {firstname, lastname, email, password} = req.body
-//     //const encPasswd = bcrypt.hashSync(password, 10)
-//     db.query("INSERT INTO user (firstname, lastname, email, password) VALUES (?, ?, ?, ?)",
-//         [firstname, lastname, email, password],
-//         (err, result) => {
-//             if(err)
-//                 return resp.send(apiError(err))
-//             // if user inserted successfully, return new user object
-//             if(result.affectedRows === 1) {
-//                 db.query("SELECT * FROM user WHERE id=?", [result.insertId],
-//                     (err, results) => {
-//                         if(err)
-//                             return resp.send(apiError(err))
-//                         resp.send(apiSuccess(results[0]))
-//                     }
-//                 )
-//             }
-//         }
-//     )
-// })
+//POST /user SignUp
+router.post("/signup", (req, resp) => {
+    const {firstname, lastname, email, password} = req.body
+    //const encPasswd = bcrypt.hashSync(password, 10)
+    db.query("INSERT INTO user (firstname, lastname, email, password) VALUES (?, ?, ?, ?)",
+        [firstname, lastname, email, password],
+        (err, result) => {
+            if(err)
+                return resp.send(apiError(err))
+            // if user inserted successfully, return new user object
+            if(result.affectedRows === 1) {
+                db.query("SELECT * FROM user WHERE id=?", [result.insertId],
+                    (err, results) => {
+                        if(err)
+                            return resp.send(apiError(err))
+                        resp.send(apiSuccess(results[0]))
+                    }
+                )
+            }
+        }
+    )
+})
 
 
+
+//Put /user/editprofile
 
 
 
